@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main  # sau "master" dacă repo-ul tău are acest branch
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Articole Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titlu", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Conținut", name: "body", widget: "markdown" }
